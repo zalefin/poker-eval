@@ -2,27 +2,26 @@ package in.zachlef.poker.rule;
 
 import in.zachlef.poker.Card;
 import in.zachlef.poker.Hand;
-import in.zachlef.poker.Suit;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 
 public class FourOfAKind implements HandState, Ranking {
+
     @Override
     public Optional<Hand> isSatisfied(Hand hand) {
-        List<Card> foakCards;
-        for (Suit suit : Suit.values()) {
-            foakCards = new ArrayList<>();
-            int count = 0;
-            for (Card card : hand.getCards()) {
-                if (card.getSuit() == suit) {
-                    foakCards.add(card);
-                    count ++;
-                }
+        HashMap<Integer, List<Card>> valueMap = new HashMap<>();
+        for (Card card : hand.getCards()) {
+            int value = card.getValue().getRawValue();
+            if (!valueMap.containsKey(value)) {
+                valueMap.put(value, new ArrayList<>());
             }
-            if (count >= 4) {
-                return Optional.of(new Hand(foakCards));
+            List<Card> cards = valueMap.get(value);
+            cards.add(card);
+            if (cards.size() == 4) {
+                return Optional.of(new Hand(cards));
             }
         }
         return Optional.empty();
@@ -30,17 +29,21 @@ public class FourOfAKind implements HandState, Ranking {
 
     @Override
     public Outcome evaluate(Hand hand0, Hand hand1) {
-        Optional<Hand> foakOpt0 = isSatisfied(hand0);
-        boolean isFoak0 = foakOpt0.isPresent();
-        Optional<Hand> foakOpt1 = isSatisfied(hand1);
-        boolean isFoak1 = foakOpt1.isPresent();
-        if (!isFoak0 && !isFoak1) {
+        // TODO rename vars here
+        Optional<Hand> pairOptional0 = this.isSatisfied(hand0);
+        boolean isPair0 = pairOptional0.isPresent();
+        Optional<Hand> pairOptional1 = this.isSatisfied(hand1);
+        boolean isPair1 = pairOptional1.isPresent();
+
+        if (!isPair0 && !isPair1) {
             return Outcome.TIE;
-        } else if (isFoak0 && isFoak1) {
-            return new HighCard().evaluate(foakOpt0.get(), foakOpt1.get());
+        } else if (isPair0 && isPair1) {
+            Hand pair0 = pairOptional0.get();
+            Hand pair1 = pairOptional1.get();
+            Outcome pairHighCardOutcome = new HighCard().evaluate(pair0, pair1);
+            return pairHighCardOutcome;
         } else {
-            // because of previous cases, we know ONE of the two must have a straight flush
-            return isFoak0 ? Outcome.WIN : Outcome.LOSE;
+            return isPair0 ? Outcome.WIN : Outcome.LOSE;
         }
     }
 }

@@ -9,17 +9,11 @@ public class StraightFlush implements HandState, Ranking {
 
     @Override
     public Optional<Hand> isSatisfied(Hand hand) {
-        if (!hand.getCards().stream().allMatch(card -> card.getSuit() == hand.getCards().get(0).getSuit())) {
+        if (new Straight().isSatisfied(hand).isPresent() && new Flush().isSatisfied(hand).isPresent()) {
+            return Optional.of(hand);
+        } else {
             return Optional.empty();
         }
-        int last = hand.getCards().get(0).getValue().getRawValue();
-        for (Card card : hand.getCards()) {
-            if (card.getValue().getRawValue() != last) {
-                return Optional.empty();
-            }
-            last ++;
-        }
-        return Optional.of(hand);
     }
 
 

@@ -10,10 +10,10 @@ public class Poker implements Ranking {
     @Override
     public Outcome evaluate(Hand hand0, Hand hand1) {
         List<Ranking> steps = new ArrayList<>();
-//        steps.add(new StraightFlush());
-//        steps.add(new FourOfAKind());
-//        steps.add(new FullHouse());
-//        steps.add(new Flush());
+        steps.add(new StraightFlush());
+        steps.add(new FourOfAKind());
+        steps.add(new FullHouse());
+        steps.add(new Flush());
         steps.add(new Straight());
         steps.add(new ThreeOfAKind());
         steps.add(new TwoPair());
@@ -29,26 +29,5 @@ public class Poker implements Ranking {
         }
 
         return Outcome.TIE;
-
-//        Outcome straightFlushOutcome = new StraightFlush().evaluate(hand0, hand1);
-//        if (straightFlushOutcome != Outcome.TIE) {
-//            System.out.println("" + straightFlushOutcome + " @ StraightFlush");
-//            return straightFlushOutcome;
-//        }
-//
-//        Outcome foakOutcome = new FourOfAKind().evaluate(hand0, hand1);
-//        if (foakOutcome != Outcome.TIE) {
-//            System.out.println("" + foakOutcome + " @ FourOfAKind");
-//            return foakOutcome;
-//        }
-//
-//        Outcome pairOutcome = new FourOfAKind().evaluate(hand0, hand1);
-//        if (foakOutcome != Outcome.TIE) {
-//            System.out.println("" + foakOutcome + " @ FourOfAKind");
-//            return foakOutcome;
-//        }
-//
-//        Outcome highCard = new HighCard().evaluate(hand0, hand1);
-//        return highCard;
     }
 }

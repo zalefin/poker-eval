@@ -8,9 +8,9 @@ public class Main {
     public static void main(String[] args) {
 //        String hands0 = "Black: 2H 3D 5S 9C KD  White: 2C 3H 4S 8C AH";
 //        String hands0 = "Black: 2H 3H 4D 5H 2H  White: 2H 3C 4C 5C 7C";
-        String hands0 = "Black: 2H 2H 2D 4H 5H  White: 2H 2C 4C 4C 7C";
+        String hands0 = "Black: 2H 2H 2H 4H 5H  White: 2H 2C 4C 4C 4C";
 //        String hands1 = "Black: 2H 4S 4C 2D 4H  White: 2S 8S AS QS 3S";
-        String hands1 = "Black: 2H 3S 4C 5D 6H  White: 3S 4S 5S 6S 6S";
+        String hands1 = "Black: 2H 3S 4C 5D 6H  White: 2S 4S 5S 7S 6H";
         String hands2 = "Black: 2H 3D 5S 9C KD  White: 2C 3H 4S 8C KH";
         String hands3 = "Black: 2H 3D 5S 9C KD  White: 2D 3H 5C 9S KH";
 
