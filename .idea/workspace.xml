@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b092f08b-1a37-413f-bd3a-2bd277e67b22" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/in/zachlef/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/zachlef/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/Suit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/Suit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/rule/Flush.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/rule/Flush.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/rule/FourOfAKind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/rule/FourOfAKind.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/rule/FullHouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/rule/FullHouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/rule/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/rule/Pair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/rule/Straight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/rule/Straight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/rule/StraightFlush.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/rule/StraightFlush.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/rule/ThreeOfAKind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/rule/ThreeOfAKind.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +27,58 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="manifestsoln-kata-poker" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="manifestsoln-kata-poker" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="manifestsoln-kata-poker" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="manifestsoln-kata-poker" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2LYjAjIzEqJ8f0piggqelZMCZAW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -25,9 +87,128 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "WebServerToolWindowFactoryState": "false"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "/home/zach/source/Sn00ptools-VaultHunters",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="in.zachlef.poker.rule" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.manifestsoln-kata-poker [run]">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="in.zachlef.poker.Main" />
+      <module name="manifestsoln-kata-poker.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="in.zachlef.poker.parse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="manifestsoln-kata-poker [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="manifestsoln-kata-poker [run]" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="run" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="manifestsoln-kata-poker [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Test" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Gradle.manifestsoln-kata-poker [run]" />
+      <item itemvalue="Gradle.manifestsoln-kata-poker [test]" />
+      <item itemvalue="Gradle.manifestsoln-kata-poker [build]" />
+      <item itemvalue="JUnit.Test" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.manifestsoln-kata-poker [test]" />
+        <item itemvalue="Gradle.manifestsoln-kata-poker [build]" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -36,7 +217,29 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1676054774873</updated>
+      <workItem from="1676054776357" duration="400000" />
+      <workItem from="1676059306168" duration="14902000" />
+      <workItem from="1676112797814" duration="22372000" />
+      <workItem from="1676140175442" duration="2292000" />
+      <workItem from="1676205766269" duration="14054000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/manifestsoln_kata_poker$manifestsoln_kata_poker__run_.ic" NAME="manifestsoln-kata-poker [run] Coverage Results" MODIFIED="1676128868270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
