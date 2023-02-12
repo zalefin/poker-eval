@@ -8,7 +8,8 @@ public enum Suit {
     CLUB,
     SPADE;
 
-    Suit() {
-
+    @Override
+    public String toString() {
+        return "" + this.name().charAt(0);
     }
 }
