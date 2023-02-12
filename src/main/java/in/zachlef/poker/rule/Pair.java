@@ -2,14 +2,13 @@ package in.zachlef.poker.rule;
 
 import in.zachlef.poker.Card;
 import in.zachlef.poker.Hand;
-import in.zachlef.poker.Value;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 
-public class Pair implements Ranking, HandState {
+public class Pair extends HandStateRule {
 
     @Override
     public Optional<Hand> isSatisfied(Hand hand) {
@@ -29,28 +28,15 @@ public class Pair implements Ranking, HandState {
     }
 
     @Override
-    public Outcome evaluate(Hand hand0, Hand hand1) {
-        Optional<Hand> pairOptional0 = this.isSatisfied(hand0);
-        boolean isPair0 = pairOptional0.isPresent();
-        Optional<Hand> pairOptional1 = this.isSatisfied(hand1);
-        boolean isPair1 = pairOptional1.isPresent();
-
-        if (!isPair0 && !isPair1) {
-            return Outcome.TIE;
-        } else if (isPair0 && isPair1) {
-            Hand pair0 = pairOptional0.get();
-            Hand pair1 = pairOptional1.get();
-            Outcome pairHighCardOutcome = new HighCard().evaluate(pair0, pair1);
-            if (pairHighCardOutcome == Outcome.TIE) {
-                Hand other0 = hand0.difference(pair0);
-                Hand other1 = hand1.difference(pair1);
-                Outcome otherHighCardOutcome = new HighCard().evaluate(other0, other1);
-                return otherHighCardOutcome;
-            } else {
-                return pairHighCardOutcome;
-            }
+    public Outcome evaluateDoubleSatisfied(Hand hand0, Hand hand1) {
+        Outcome pairHighCardOutcome = new HighCard().evaluate(hand0, hand1);
+        if (pairHighCardOutcome == Outcome.TIE) {
+            Hand other0 = hand0.difference(hand0);
+            Hand other1 = hand1.difference(hand1);
+            Outcome otherHighCardOutcome = new HighCard().evaluate(other0, other1);
+            return otherHighCardOutcome;
         } else {
-            return isPair0 ? Outcome.WIN : Outcome.LOSE;
+            return pairHighCardOutcome;
         }
     }
 }
