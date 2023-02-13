@@ -1,6 +1,9 @@
 package in.zachlef.poker.rule;
 
+import in.zachlef.poker.Card;
 import in.zachlef.poker.Hand;
+import in.zachlef.poker.Suit;
+import in.zachlef.poker.Value;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +31,18 @@ public class Poker implements Ranking {
             }
         }
 
+        System.out.println("" + Outcome.TIE + " @ " + HighCard.class.getName());
         return Outcome.TIE;
+    }
+
+    public static Hand getDeck() {
+        List<Card> cards = new ArrayList<>();
+        for (Suit suit : Suit.values()) {
+            for (int i = 2; i <= 14; i++) {
+                Value value = Value.fromInt(i);
+                cards.add(new Card(value, suit));
+            }
+        }
+        return new Hand(cards);
     }
 }

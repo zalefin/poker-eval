@@ -40,6 +40,13 @@ public class Hand {
         return new Hand(cards);
     }
 
+    public Card drawRand() {
+        int i = new Random().nextInt(this.cards.size());
+        Card card = this.getCard(i);
+        this.cards.remove(i);
+        return card;
+    }
+
     @Override
     public String toString() {
         return String.join(" ", this.cards.stream().map(card -> card.toString()).toList());

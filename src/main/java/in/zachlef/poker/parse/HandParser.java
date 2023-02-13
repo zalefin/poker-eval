@@ -21,4 +21,12 @@ public class HandParser implements Parser<Hand> {
 
         return new Hand(cards);
     }
+
+    public List<Hand> parseTwoHand(String handsLine) throws CardParseException {
+        String[] handLines = handsLine.split("  ");
+        List<Hand> hands = new ArrayList<>();
+        hands.add(parse(handLines[0]));
+        hands.add(parse(handLines[1]));
+        return hands;
+    }
 }

@@ -4,41 +4,70 @@ import in.zachlef.poker.parse.CardParseException;
 import in.zachlef.poker.parse.HandParser;
 import in.zachlef.poker.rule.Poker;
 
-public class Main {
-    public static void main(String[] args) {
-//        String hands0 = "Black: 2H 3D 5S 9C KD  White: 2C 3H 4S 8C AH";
-//        String hands0 = "Black: 2H 3H 4D 5H 2H  White: 2H 3C 4C 5C 7C";
-        String hands0 = "Black: 2H 2H 2H 4H 5H  White: 2H 2C 4C 4C 4C";
-//        String hands1 = "Black: 2H 4S 4C 2D 4H  White: 2S 8S AS QS 3S";
-        String hands1 = "Black: 2H 3S 4C 5D 6H  White: 2S 4S 5S 7S 6H";
-        String hands2 = "Black: 2H 3D 5S 9C KD  White: 2C 3H 4S 8C KH";
-        String hands3 = "Black: 2H 3D 5S 9C KD  White: 2D 3H 5C 9S KH";
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
-//        System.out.println(hands0);
-        try {
-            doGame(hands0);
-            doGame(hands1);
-        } catch (CardParseException e) {
-            e.printStackTrace();
+public class Main {
+    public static void main(String[] args) throws FileNotFoundException {
+        if (args.length < 1) {
+            System.err.println("Requires path or \"two hand string\" args!");
+            System.exit(-1);
         }
-//        doGame(hands1);
-//        doGame(hands2);
-//        doGame(hands3);
+
+        String arg = args[0];
+        File file = new File(arg);
+        HandParser parser = new HandParser();
+        Poker game = new Poker();
+
+        if (file.exists() && file.canRead()) {
+            Scanner reader = new Scanner(file);
+            while (reader.hasNextLine()) {
+                String handsLine = reader.nextLine();
+                List<Hand> hands;
+                try {
+                     hands = parser.parseTwoHand(handsLine);
+                } catch (CardParseException e) {
+                    e.printStackTrace();
+                    continue;
+                }
+                System.out.println(handsLine);
+                game.evaluate(hands.get(0), hands.get(1));
+            }
+
+        } else {
+            List<Hand> hands = null;
+            try {
+                hands = parser.parseTwoHand(arg);
+            } catch (CardParseException e) {
+                e.printStackTrace();
+                System.exit(-1);
+            }
+            System.out.println(arg);
+            game.evaluate(hands.get(0), hands.get(1));
+        }
     }
 
-    private static void doGame(String hands) throws CardParseException {
+    public static void doRandomGames(int n) {
+        for (int runCount = 0; runCount < n; runCount++) {
+            Hand deck = Poker.getDeck();
 
-        HandParser handParser = new HandParser();
+            List<Card> cards0 = new ArrayList<>();
+            List<Card> cards1 = new ArrayList<>();
+            for (int i = 0; i < 5; i++) {
+                cards0.add(deck.drawRand());
+                cards1.add(deck.drawRand());
+            }
 
-        Hand blackHand = handParser.parse(hands.split("  ")[0]);
-        Hand whiteHand = handParser.parse(hands.split("  ")[1]);
+            Hand hand0 = new Hand(cards0);
+            Hand hand1 = new Hand(cards1);
 
-        System.out.println("Black: " + blackHand.toString());
-        System.out.println("White: " + whiteHand.toString());
-
-
-        System.out.println(new Poker().evaluate(blackHand, whiteHand));
-
+            System.out.println("Black: " + hand0);
+            System.out.println("White: " + hand1);
+            new Poker().evaluate(hand0, hand1);
+        }
 
     }
 }

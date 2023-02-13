@@ -20,6 +20,6 @@ public class Card {
 
     @Override
     public String toString() {
-        return this.value.toString() + this.suit.name();
+        return this.value.toString() + this.suit.toString();
     }
 }
