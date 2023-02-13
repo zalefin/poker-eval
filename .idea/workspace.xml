@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b092f08b-1a37-413f-bd3a-2bd277e67b22" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/Hand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/Hand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/Suit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/Suit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/rule/Flush.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/rule/Flush.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/rule/FourOfAKind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/rule/FourOfAKind.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/rule/FullHouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/rule/FullHouse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/rule/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/rule/Pair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/rule/Straight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/rule/Straight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/rule/StraightFlush.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/rule/StraightFlush.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/rule/ThreeOfAKind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/rule/ThreeOfAKind.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/Value.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/Value.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/parse/HandParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/parse/HandParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/rule/Poker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/zachlef/poker/rule/Poker.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,12 +45,6 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="manifestsoln-kata-poker" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="manifestsoln-kata-poker" type="f1a62948:ProjectNode" />
                 <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
               </path>
             </expand>
@@ -68,8 +59,8 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -85,19 +76,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "/home/zach/source/Sn00ptools-VaultHunters",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/zach/source/Sn00ptools-VaultHunters&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -106,7 +98,7 @@
       <recent name="in.zachlef.poker.rule" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.manifestsoln-kata-poker [run]">
+  <component name="RunManager" selected="Gradle.manifestsoln-kata-poker [test]">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="in.zachlef.poker.Main" />
       <module name="manifestsoln-kata-poker.main" />
@@ -141,7 +133,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="manifestsoln-kata-poker [run]" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
+    <configuration name="manifestsoln-kata-poker [run --args=&quot;./hands.txt&quot;]" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -153,6 +145,7 @@
         <option name="taskNames">
           <list>
             <option value="run" />
+            <option value="--args=&quot;./hands.txt&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -196,7 +189,7 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="Gradle.manifestsoln-kata-poker [run]" />
+      <item itemvalue="Gradle.manifestsoln-kata-poker [run --args=&quot;./hands.txt&quot;]" />
       <item itemvalue="Gradle.manifestsoln-kata-poker [test]" />
       <item itemvalue="Gradle.manifestsoln-kata-poker [build]" />
       <item itemvalue="JUnit.Test" />
@@ -221,7 +214,11 @@
       <workItem from="1676059306168" duration="14902000" />
       <workItem from="1676112797814" duration="22372000" />
       <workItem from="1676140175442" duration="2292000" />
-      <workItem from="1676205766269" duration="14054000" />
+      <workItem from="1676205766269" duration="17244000" />
+      <workItem from="1676281128010" duration="580000" />
+      <workItem from="1676310513349" duration="156000" />
+      <workItem from="1676310677016" duration="71000" />
+      <workItem from="1676311738545" duration="2801000" />
     </task>
     <servers />
   </component>
@@ -238,6 +235,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/manifestsoln_kata_poker$manifestsoln_kata_poker__run_.ic" NAME="manifestsoln-kata-poker [run] Coverage Results" MODIFIED="1676128868270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
